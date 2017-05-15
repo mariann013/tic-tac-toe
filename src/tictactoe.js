@@ -10,7 +10,7 @@ function TicTacToe () {
 
 TicTacToe.prototype.startGame = function() {
     return this.board;
-}
+};
 
 TicTacToe.prototype.pickPlayer = function(symbol) {
 
@@ -21,4 +21,8 @@ TicTacToe.prototype.pickPlayer = function(symbol) {
         this.player1 = 'o';
         this.player2 = 'y';
     }
-}
+};
+
+TicTacToe.prototype.pickLocation = function(x , y) {
+   this.board[y[x]] = 'x';
+};

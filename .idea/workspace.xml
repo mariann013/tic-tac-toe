@@ -19,11 +19,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tictactoeSpec.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tictactoeSpec.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/tictactoeSpec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            <state relative-caret-position="445">
+              <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -39,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tictactoe.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tictactoe.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/tictactoe.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            <state relative-caret-position="356">
+              <caret line="27" column="2" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -60,8 +60,8 @@
         <option value="$PROJECT_DIR$/spec/support/jasmine.json" />
         <option value="$PROJECT_DIR$/spec/tic-tac-toe-test.js" />
         <option value="$PROJECT_DIR$/SpecRunner.html" />
-        <option value="$PROJECT_DIR$/src/tictactoe.js" />
         <option value="$PROJECT_DIR$/spec/tictactoeSpec.js" />
+        <option value="$PROJECT_DIR$/src/tictactoe.js" />
       </list>
     </option>
   </component>
@@ -239,12 +239,12 @@
       <option name="presentableId" value="Default" />
       <updated>1494858036783</updated>
       <workItem from="1494858038290" duration="1333000" />
-      <workItem from="1494859584469" duration="1839000" />
+      <workItem from="1494859584469" duration="2478000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3172000" />
+    <option name="totallyTimeSpent" value="3811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="87" width="1280" height="605" extended-state="0" />
@@ -311,18 +311,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tictactoe.js">
+    <entry file="file://$PROJECT_DIR$/spec/tictactoeSpec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="445">
+          <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/tictactoeSpec.js">
+    <entry file="file://$PROJECT_DIR$/src/tictactoe.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        <state relative-caret-position="356">
+          <caret line="27" column="2" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
           <folding />
         </state>
       </provider>

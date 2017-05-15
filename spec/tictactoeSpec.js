@@ -17,5 +17,10 @@ describe('Tic Tac Toe', function() {
         tictactoe.pickPlayer('x');
         expect(tictactoe.player1).toEqual("x");
         expect(tictactoe.player2).toEqual("o");
-    })
+    });
+
+    it('expects a player1 to choose a start co-ordinate', function() {
+        tictactoe.pickLocation(0, 0);
+        expect(tictactoe.board[0[0]]).toEqual('x');
+    });
 });
