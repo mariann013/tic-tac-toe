@@ -24,5 +24,6 @@ TicTacToe.prototype.pickPlayer = function(symbol) {
 };
 
 TicTacToe.prototype.pickLocation = function(x , y) {
-   this.board[y[x]] = 'x';
+   this.board[y][x] = 'x';
+   console.log(this.board);
 };

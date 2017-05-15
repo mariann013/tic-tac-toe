@@ -21,6 +21,6 @@ describe('Tic Tac Toe', function() {
 
     it('expects a player1 to choose a start co-ordinate', function() {
         tictactoe.pickLocation(0, 0);
-        expect(tictactoe.board[0[0]]).toEqual('x');
+        expect(tictactoe.board[0][0]).toEqual('x');
     });
 });
