@@ -49,25 +49,18 @@ TicTacToe.prototype.checkRow = function() {
 };
 
 TicTacToe.prototype.checkColumn = function() {
-    x_count = 0;
-    y_count = 0;
-    for(i=0; i<=2; i++) {
-        for(j=0; j<=2; j++) {
-            if (this.board[i][j] === "x") {
-                x_count += 1;
-            }
-            else if (this.board[i][j] === "o") {
-                o_count += 1;
-            }
-        }
+    var winner;
+    var colboard = [];
+    for (var i = 0; i <= 2; i++) {
+        this.board.map(function (value) {
+             colboard.push(value[i]);
+        });
     }
-
-    if (x_count === 3) {
-        return 'x is the winner';
-    } else if (o_count === 3) {
-        return 'o is the winner';
-    } else {
-        return 'no winner yet';
+    if ((colboard[0] === "x" && colboard[1] === "x" && colboard[2] === "x") || (colboard[3] === "x" && colboard[4] === "x" && colboard[5] === "x") || (colboard[6] === "x" && colboard[7] === "x" && colboard[8] === "x")) {
+        winner = 'x is the winner';
     }
-
+    else if ((colboard[0] === "o" && colboard[1] === "o" && colboard[2] === "o") || (colboard[3] === "o" && colboard[4] === "o" && colboard[5] === "o") || (colboard[6] === "o" && colboard[7] === "o" && colboard[8] === "o")) {
+        winner = 'o is the winner';
+    }
+    return winner || 'no winner yet';
 };

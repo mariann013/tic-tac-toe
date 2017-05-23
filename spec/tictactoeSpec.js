@@ -42,7 +42,6 @@ describe('Tic Tac Toe', function() {
         tictactoe.pickLocation(0, 1);
         tictactoe.pickLocation(1, 1);
         tictactoe.pickLocation(2, 1);
-        console.log(tictactoe.board);
         expect(tictactoe.checkRow()).toEqual('o is the winner');
     });
 
@@ -66,5 +65,12 @@ describe('Tic Tac Toe', function() {
         tictactoe.pickLocation(0, 1);
         tictactoe.pickLocation(0, 2);
         expect(tictactoe.checkColumn()).toEqual('x is the winner');
+    });
+    it('should check to see if a column is filled with o', function() {
+        tictactoe.pickPlayer('o');
+        tictactoe.pickLocation(1, 0);
+        tictactoe.pickLocation(1, 1);
+        tictactoe.pickLocation(1, 2);
+        expect(tictactoe.checkColumn()).toEqual('o is the winner');
     });
 });
