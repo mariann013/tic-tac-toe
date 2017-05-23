@@ -14,12 +14,12 @@ TicTacToe.prototype.startGame = function() {
 
 TicTacToe.prototype.pickPlayer = function(symbol) {
 
-    if (symbol === 'x') {
-        this.player1 = 'x';
-        this.player2 = 'o';
+    if (symbol === "x") {
+        this.player1 = "x";
+        this.player2 = "o";
     } else {
-        this.player1 = 'o';
-        this.player2 = 'x';
+        this.player1 = "o";
+        this.player2 = "x";
     }
 };
 
@@ -27,23 +27,36 @@ TicTacToe.prototype.pickLocation = function(x, y) {
     if (x > 2 || y > 2) {
         return 'Sorry try again';
     }
-    if (this.player1 === 'x') {
-        this.board[y][x] = 'x';
+    if (this.player1 === "x") {
+        this.board[y][x] = "x";
     }
     else {
-        this.board[y][x] = 'o';
+        this.board[y][x] = "o";
     }
 };
 
 TicTacToe.prototype.checkRow = function() {
+    var winner;
+    for (var i=0; i<=2; i++) {
+        if (this.board[i].toString() === "x,x,x") {
+             winner = 'x is the winner';
+        }
+        else if (this.board[i].toString() === "o,o,o") {
+            winner = 'o is the winner';
+        }
+    }
+    return winner || "no winner yet";
+};
+
+TicTacToe.prototype.checkColumn = function() {
     x_count = 0;
-    o_count = 0
+    y_count = 0;
     for(i=0; i<=2; i++) {
         for(j=0; j<=2; j++) {
-            if (this.board[j][i] === 'x') {
+            if (this.board[i][j] === "x") {
                 x_count += 1;
             }
-            else if (this.board[j][i] === 'o') {
+            else if (this.board[i][j] === "o") {
                 o_count += 1;
             }
         }
@@ -56,5 +69,5 @@ TicTacToe.prototype.checkRow = function() {
     } else {
         return 'no winner yet';
     }
-};
 
+};

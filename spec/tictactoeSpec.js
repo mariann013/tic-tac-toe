@@ -34,7 +34,6 @@ describe('Tic Tac Toe', function() {
         tictactoe.pickLocation(0, 0);
         tictactoe.pickLocation(1, 0);
         tictactoe.pickLocation(2, 0);
-        console.log(tictactoe.board);
         expect(tictactoe.checkRow()).toEqual('x is the winner');
     });
 
@@ -51,5 +50,21 @@ describe('Tic Tac Toe', function() {
         tictactoe.pickPlayer('x');
         tictactoe.pickLocation(0, 0);
         expect(tictactoe.checkRow()).toEqual('no winner yet');
+    });
+
+    it('should check to see if a row is filled with the o symbol' , function() {
+        tictactoe.pickPlayer('o');
+        tictactoe.pickLocation(0, 1);
+        tictactoe.pickLocation(1, 2);
+        tictactoe.pickLocation(2, 1);
+        expect(tictactoe.checkRow()).toEqual('no winner yet');
+    });
+
+    it('should check to see if a column is filled with x', function() {
+        tictactoe.pickPlayer('x');
+        tictactoe.pickLocation(0, 0);
+        tictactoe.pickLocation(0, 1);
+        tictactoe.pickLocation(0, 2);
+        expect(tictactoe.checkColumn()).toEqual('x is the winner');
     });
 });
