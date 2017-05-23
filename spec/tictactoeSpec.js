@@ -77,13 +77,13 @@ describe('Tic Tac Toe', function() {
         tictactoe.pickLocation(0, 0);
         tictactoe.pickLocation(1, 1);
         tictactoe.pickLocation(2, 2);
-        expect(tictactoe.checkColumn()).toEqual('x is the winner');
+        expect(tictactoe.checkDiagonal()).toEqual('x is the winner');
     });
     it('should return winner if a diagonal is filled with the o symbol', function() {
         tictactoe.pickPlayer('o');
-        tictactoe.pickLocation(0, 0);
+        tictactoe.pickLocation(2, 0);
         tictactoe.pickLocation(1, 1);
-        tictactoe.pickLocation(2, 2);
-        expect(tictactoe.checkColumn()).toEqual('o is the winner');
+        tictactoe.pickLocation(0, 2);
+        expect(tictactoe.checkDiagonal()).toEqual('o is the winner');
     });
 });
