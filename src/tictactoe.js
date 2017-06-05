@@ -6,6 +6,7 @@ function TicTacToe () {
 
     var player1;
     var player2;
+    var currentPlayer;
 }
 
 TicTacToe.prototype.startGame = function() {
@@ -21,18 +22,20 @@ TicTacToe.prototype.pickPlayer = function(symbol) {
         this.player1 = "o";
         this.player2 = "x";
     }
+    this.currentPlayer = this.player1
 };
 
 TicTacToe.prototype.pickLocation = function(x, y) {
     if (x > 2 || y > 2) {
         return 'Sorry try again';
     }
-    if (this.player1 === "x") {
-        this.board[y][x] = "x";
+    if (this.board[y][x] !== 0) {
+        return 'Sorry that spot is already taken!';
     }
-    else {
-        this.board[y][x] = "o";
-    }
+
+    this.currentPlayer === "x" ? this.board[y][x] = "x" : this.board[y][x] = "o";
+
+    this.currentPlayer === this.player1 ? this.currentPlayer = this.player2 : this.currentPlayer = this.player1;
 };
 
 TicTacToe.prototype.checkRow = function() {

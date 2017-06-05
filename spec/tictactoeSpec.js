@@ -13,13 +13,13 @@ describe('Tic Tac Toe', function() {
         expect(tictactoe.board[0]).toEqual([0,0,0]);
     });
 
-    it('expects player1 to pick a symbol', function() {
+    it('expects player1 to pick either x or o', function() {
         tictactoe.pickPlayer('x');
         expect(tictactoe.player1).toEqual("x");
         expect(tictactoe.player2).toEqual("o");
     });
 
-    it('expects a player1 to choose a start co-ordinate', function() {
+    it('expects player1 to choose a start co-ordinate', function() {
         tictactoe.pickPlayer('x');
         tictactoe.pickLocation(0, 0);
         expect(tictactoe.board[0][0]).toEqual('x');
@@ -32,7 +32,9 @@ describe('Tic Tac Toe', function() {
     it('should return winner if a row is filled with the x symbol' , function() {
         tictactoe.pickPlayer('x');
         tictactoe.pickLocation(0, 0);
+        tictactoe.pickLocation(1, 1);
         tictactoe.pickLocation(1, 0);
+        tictactoe.pickLocation(2, 1);
         tictactoe.pickLocation(2, 0);
         expect(tictactoe.checkRow()).toEqual('x is the winner');
     });
@@ -40,7 +42,9 @@ describe('Tic Tac Toe', function() {
     it('should return winner if a row is filled with the o symbol' , function() {
         tictactoe.pickPlayer('o');
         tictactoe.pickLocation(0, 1);
+        tictactoe.pickLocation(1, 2);
         tictactoe.pickLocation(1, 1);
+        tictactoe.pickLocation(0, 2);
         tictactoe.pickLocation(2, 1);
         expect(tictactoe.checkRow()).toEqual('o is the winner');
     });
@@ -55,14 +59,18 @@ describe('Tic Tac Toe', function() {
     it('should return winner if a column is filled with the x symbol', function() {
         tictactoe.pickPlayer('x');
         tictactoe.pickLocation(0, 0);
+        tictactoe.pickLocation(1, 0);
         tictactoe.pickLocation(0, 1);
+        tictactoe.pickLocation(1, 2);
         tictactoe.pickLocation(0, 2);
         expect(tictactoe.checkColumn()).toEqual('x is the winner');
     });
     it('should return winner if a column is filled with the o symbol', function() {
         tictactoe.pickPlayer('o');
         tictactoe.pickLocation(1, 0);
+        tictactoe.pickLocation(2, 1);
         tictactoe.pickLocation(1, 1);
+        tictactoe.pickLocation(2, 0);
         tictactoe.pickLocation(1, 2);
         expect(tictactoe.checkColumn()).toEqual('o is the winner');
     });
@@ -75,15 +83,29 @@ describe('Tic Tac Toe', function() {
     it('should return winner if a diagonal is filled with the x symbol', function() {
         tictactoe.pickPlayer('x');
         tictactoe.pickLocation(0, 0);
+        tictactoe.pickLocation(2, 1);
         tictactoe.pickLocation(1, 1);
+        tictactoe.pickLocation(1, 2);
         tictactoe.pickLocation(2, 2);
         expect(tictactoe.checkDiagonal()).toEqual('x is the winner');
     });
     it('should return winner if a diagonal is filled with the o symbol', function() {
         tictactoe.pickPlayer('o');
         tictactoe.pickLocation(2, 0);
+        tictactoe.pickLocation(0, 1);
         tictactoe.pickLocation(1, 1);
+        tictactoe.pickLocation(1, 0);
         tictactoe.pickLocation(0, 2);
         expect(tictactoe.checkDiagonal()).toEqual('o is the winner');
     });
+    it('should switch users once a player has played', function() {
+        tictactoe.pickPlayer('x');
+        tictactoe.pickLocation(2,1);
+        expect(tictactoe.currentPlayer).toEqual('o');
+    });
+    it('should not let you fill a spot that is already filled', function() {
+        tictactoe.pickPlayer('x');
+        tictactoe.pickLocation(1,1);
+        expect(tictactoe.pickLocation(1,1)).toEqual('Sorry that spot is already taken!');
+    })
 });
